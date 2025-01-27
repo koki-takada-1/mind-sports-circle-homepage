@@ -1,5 +1,6 @@
 "use client";
 
+import Header from "@/components/header/header";
 import { Marquee } from "@/components/ui/marquee";
 import { TypingAnimation } from "@/components/ui/typing-animation";
 import { cn } from "@/lib/utils";
@@ -57,6 +58,10 @@ const ReviewCard = ({
 export function Intro() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl">
+      <Header />
+      <div className="mb-24">
+
+      </div>
       <Marquee pauseOnHover className="[--duration:20s] [--gap:1rem]">
         {firstRow.map((review, index) => (
           <ReviewCard key={index} {...review} />

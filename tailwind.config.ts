@@ -155,12 +155,24 @@ export default {
   				'100%': {
   					transform: 'rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg))'
   				}
+  			},
+  			shine: {
+  				'0%': {
+  					'background-position': '0% 0%'
+  				},
+  				'50%': {
+  					'background-position': '100% 100%'
+  				},
+  				to: {
+  					'background-position': '0% 0%'
+  				}
   			}
   		},
   		animation: {
   			marquee: 'marquee var(--duration) infinite linear',
   			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
-  			orbit: 'orbit calc(var(--duration)*1s) linear infinite'
+  			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
+  			shine: 'shine var(--duration) infinite linear'
   		}
   	}
   },
