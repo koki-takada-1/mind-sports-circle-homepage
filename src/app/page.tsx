@@ -1,5 +1,7 @@
+import Footer from "@/components/footer/footer";
 import { MainHome } from "@/components/mainhome/mainhome";
 import { Intro } from "@/components/ui/intro/intro";
+
 export default function Home() {
   return (
     <>
@@ -15,8 +17,8 @@ export default function Home() {
             知的な遊戯に皆で興じながら知力と精神力を研き合うための団体です。
           </p>
         </div>
-
       </div>
+      <Footer />
     </>
   );
 }
