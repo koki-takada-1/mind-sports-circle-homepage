@@ -111,11 +111,16 @@
     -0.5px  0.5px 0 #fff,
      0.5px  0.5px 0 #fff;
 } */
-@layer base {
+/* @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
   }
+} */
+
+.logo-container:hover .logo-image {
+  filter: invert(70%);
+  /* fill: #777777; */
 }

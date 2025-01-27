@@ -109,13 +109,19 @@ const Footer: React.FC = () => {
               <p>&copy; マインドスポーツサークル.  All rights reserved.</p>
               <div className="flex space-x-4 gap-10">
                 <Link href="#" className="hover:text-gray-300 transition-colors">
-                  <Image src="/X.svg" alt="X" width={40} height={40} />
+                  <div className="logo-container">
+                    <Image src="/X.svg" alt="X" width={40} height={40} className="logo-image" />
+                  </div>
                 </Link>
                 <Link href="#" className="hover:text-gray-300 transition-colors">
-                  <Image src="/github-mark-white.svg" alt="Github" width={40} height={40} />
+                  <div className="logo-container">
+                    <Image src="/github-mark-white.svg" alt="Github" width={40} height={40} className="logo-image" />
+                  </div>
                 </Link>
                 <Link href="#" className="hover:text-gray-300 transition-colors">
-                  <Image src="/youtube.svg" alt="Youtube" width={40} height={40} />
+                  <div className="logo-container">
+                    <Image src="/youtube.svg" alt="Youtube" width={40} height={40} className="logo-image" />
+                  </div>
                 </Link>
               </div>
             </div>
@@ -148,15 +154,21 @@ const Footer: React.FC = () => {
               </ul>
             </nav>
             <div className="flex justify-center space-x-4 mb-6">
-            <Link href="#" className="hover:text-gray-300 transition-colors">
-                  <Image src="/X.svg" alt="X" width={40} height={40} />
-                </Link>
-                <Link href="#" className="hover:text-gray-300 transition-colors">
-                  <Image src="/github-mark-white.svg" alt="Github" width={40} height={40} />
-                </Link>
-                <Link href="#" className="hover:text-gray-300 transition-colors">
-                  <Image src="/youtube.svg" alt="Youtube" width={40} height={40} />
-                </Link>
+              <Link href="#" className="hover:text-gray-300 transition-colors">
+                <div className="logo-container">
+                  <Image src="/X.svg" alt="X" width={40} height={40} className="logo-image" />
+                </div>
+              </Link>
+              <Link href="#" className="hover:text-gray-300 transition-colors">
+                <div className="logo-container">
+                  <Image src="/github-mark-white.svg" alt="Github" width={40} height={40} className="logo-image" />
+                </div>
+              </Link>
+              <Link href="#" className="hover:text-gray-300 transition-colors">
+                <div className="logo-container">
+                  <Image src="/youtube.svg" alt="Youtube" width={40} height={40} className="logo-image" />
+                </div>
+              </Link>
             </div>
             <p className="text-center text-sm">&copy; マインドスポーツサークル. All rights reserved.</p>
           </>
