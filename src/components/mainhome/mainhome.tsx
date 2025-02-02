@@ -6,7 +6,10 @@ import Image from "next/image";
 export function MainHome() {
   const { theme } = useTheme();
   return (
-    <div className="md:ml-20 md:mt-48 mt-20 flex md:flex-row flex-col items-center justify-center bg-background md:gap-32 gap-10">
+    <>
+    <div className="md:mt-44 mt-20 text-2xl md:text-7xl text-center w-full font-bold">hogehogehoge大学公認</div>
+    <div className="md:mt-12 mt-9 text-center w-full font-bold text-2xl md:text-7xl">マインドスポーツサークル</div>
+    <div className="md:ml-20 md:mt-36 mt-10 flex md:flex-row flex-col items-center justify-center bg-background md:gap-32 gap-10">
         <div className="flex flex-col items-center justify-center">
             <div className="relative flex h-[500px] flex-col items-center justify-center overflow-hidden rounded-lg">
             <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
@@ -44,6 +47,7 @@ export function MainHome() {
           </p>
         </div>
     </div>
+    </>
   );
 }
 

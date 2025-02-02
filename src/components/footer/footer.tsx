@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
       {/* Animated background */}
       <div className="absolute inset-0 z-0 flex justify-between items-center">
         <motion.div className="relative z-10">
-          <motion.svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" className="w-full h-full scale-[4.5] ml-56">
+          <motion.svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" className="w-full h-full scale-[4.0] ml-56">
             <motion.path
               fill="#223a70"
               initial={{
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
           </motion.svg>
         </motion.div>
         <motion.div className="relative z-10">
-          <motion.svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" className="w-full h-full scale-[5.5] mr-48">
+          <motion.svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" className="w-full h-full scale-[4.0] mr-48">
             <motion.path
               fill="#223a70"
               initial={{
