@@ -1,4 +1,32 @@
 import type { Config } from "tailwindcss";
+// import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+
+function addVariablesForColors({ addBase, theme }: { addBase: any; theme: any }) {
+	const colors = theme("colors")
+	const variables: { [key: string]: string } = {}
+
+	function extractColors(
+	  colors: { [key: string]: any },
+	  prefix = ""
+	) {
+	  Object.keys(colors).forEach((colorKey) => {
+		const value = colors[colorKey]
+		const variableName = `--${prefix}${colorKey}`
+
+		if (typeof value === "string") {
+		  variables[variableName] = value
+		} else if (typeof value === "object" && value !== null) {
+		  extractColors(value, `${prefix}${colorKey}-`)
+		}
+	  })
+	}
+
+	extractColors(colors)
+
+	addBase({
+	  ":root": variables,
+	})
+  }
 
 export default {
     darkMode: ["class"],
@@ -62,6 +90,14 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		keyframes: {
+			aurora: {
+				from: {
+				  backgroundPosition: "50% 50%, 50% 50%",
+				},
+				to: {
+				  backgroundPosition: "350% 50%, 350% 50%",
+				},
+			  },
   			marquee: {
   				from: {
   					transform: 'translateX(0)'
@@ -190,9 +226,13 @@ export default {
   			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
   			shine: 'shine var(--duration) infinite linear',
   			'background-position-spin': 'background-position-spin 3000ms infinite alternate',
-  			pulse: 'pulse var(--duration) ease-out infinite'
+  			pulse: 'pulse var(--duration) ease-out infinite',
+			aurora: "aurora 60s linear infinite",
+  		},
+  		backgroundImage: {
+
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), addVariablesForColors],
 } satisfies Config;

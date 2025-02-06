@@ -7,8 +7,8 @@ export function MainHome() {
   const { theme } = useTheme();
   return (
     <>
-    <div className="md:mt-44 mt-20 text-2xl md:text-7xl text-center w-full font-bold">hogehogehoge大学公認</div>
-    <div className="md:mt-12 mt-9 text-center w-full font-bold text-2xl md:text-7xl">マインドスポーツサークル</div>
+    <div className="md:mt-24 lg:mt-28 mt-20 text-2xl md:text-4xl lg:text-6xl text-center w-full font-bold">東京国際工科専門職大学公認</div>
+    <div className="mt-9 text-center w-full font-bold text-2xl md:text-4xl lg:text-6xl">マインドスポーツサークル</div>
     <div className="md:ml-20 md:mt-36 mt-10 flex md:flex-row flex-col items-center justify-center bg-background md:gap-32 gap-10">
         <div className="flex flex-col items-center justify-center">
             <div className="relative flex h-[500px] flex-col items-center justify-center overflow-hidden rounded-lg">

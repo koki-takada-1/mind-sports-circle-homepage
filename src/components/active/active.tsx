@@ -8,12 +8,15 @@ export function Active() {
   const { theme } = useTheme();
   return (
     <>
-      <div className="h-full w-full text-4xl md:text-6xl lg:text-8xl font-bold px-16 mt-64 mb-20 text-center">主な活動</div>
+      <div className="h-full w-full text-4xl md:text-6xl lg:text-8xl font-bold px-4 md:px-8 lg:px-16 mt-40 md:mt-64 mb-20 text-center">
+      Our activities
+      </div>
       <div
         className={
-          "flex h-full w-full flex-row gap-20 lg:h-[250px] lg:flex-row mt-10 px-16 items-center justify-center"
+          "flex lg:h-[250px] flex-col md:flex-row h-full w-full gap-4 md:gap-8 lg:gap-20 mt-10 px-4 md:px-8 lg:px-16 items-center justify-center"
         }
       >
+      {/* "flex h-full w-full flex-row gap-20 lg:h-[250px] lg:flex-row mt-10 px-16 items-center justify-center" */}
         <ShineBorder
           className="w-full h-full overflow-hidden rounded-3xl border bg-background md:shadow-xl"
           color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
@@ -50,7 +53,7 @@ export function Active() {
                   className="object-contain"
                 />
               </div>
-              <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-6xl lg:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-6xl lg:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                 将棋
               </span>
             </div>
@@ -93,7 +96,7 @@ export function Active() {
                   className="object-contain"
                 />
               </div>
-              <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-6xl lg:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-6xl lg:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                 麻雀
               </span>
             </div>
@@ -102,7 +105,7 @@ export function Active() {
       </div>
       <div
         className={
-          "flex h-full w-full flex-row gap-20 lg:h-[250px] lg:flex-row mt-10 px-16 items-center justify-center"
+          "flex lg:h-[250px] flex-col md:flex-row h-full w-full gap-4 md:gap-8 lg:gap-20 mt-5 md:mt-10 px-4 md:px-8 lg:px-16 items-center justify-center"
         }
       >
         <ShineBorder
@@ -138,7 +141,7 @@ export function Active() {
                   height={60}
                 />
               </div>
-              <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-6xl lg:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-6xl lg:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                 プログラミング
               </span>
             </div>
@@ -178,7 +181,7 @@ export function Active() {
                   height={60}
                 />
               </div>
-              <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-6xl lg:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-6xl lg:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                 ビリヤード
               </span>
             </div>
@@ -187,7 +190,7 @@ export function Active() {
       </div>
       <div
         className={
-          "flex h-full w-full flex-row gap-20 lg:h-[250px] lg:flex-row mt-10 px-16 items-center justify-center"
+          "flex lg:h-[250px] flex-col md:flex-row h-full w-full gap-4 md:gap-8 lg:gap-20 mt-5 md:mt-10 px-4 md:px-8 lg:px-16 items-center justify-center"
         }
       >
         <ShineBorder
@@ -223,7 +226,7 @@ export function Active() {
                   height={60}
                 />
               </div>
-              <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-6xl lg:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-6xl lg:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                 オセロ
               </span>
             </div>
@@ -263,7 +266,7 @@ export function Active() {
                   height={60}
                 />
               </div>
-              <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-6xl lg:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-6xl lg:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                 トランプ
               </span>
             </div>
@@ -272,7 +275,7 @@ export function Active() {
       </div>
       <div
         className={
-          "flex h-full w-full flex-row gap-20 lg:h-[250px] lg:flex-row mt-10 px-16 items-center justify-center"
+"flex lg:h-[250px] flex-col md:flex-row h-full w-full gap-4 md:gap-8 lg:gap-20 mt-5 md:mt-10 px-4 md:px-8 lg:px-16 items-center justify-center"
         }
       >
         <ShineBorder

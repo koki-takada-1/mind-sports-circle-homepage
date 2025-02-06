@@ -59,7 +59,7 @@ export function Intro() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl">
       <Header />
-      <div className="mb-24">
+      <div className="">
 
       </div>
       <Marquee pauseOnHover className="[--duration:20s] [--gap:1rem]">
@@ -72,10 +72,10 @@ export function Intro() {
           <ReviewCard key={index} {...review} />
         ))}
       </Marquee>
-      <div className="absolute -inset-96 bg-white opacity-50 z-10"></div>
+      <div className="absolute inset-0 bg-white opacity-50 z-10"></div>
       <div className="absolute inset-0 flex flex-col gap-10 items-center justify-center z-20 mix-blend-multiply">
         <TextAnimateDemo />
-        <TypingAnimation>頭脳を鍛え、仲間と共に成長する</TypingAnimation>
+        <TypingAnimation className="text-xl md:text-5xl">頭脳を鍛え、仲間と共に成長する</TypingAnimation>
       </div>
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>

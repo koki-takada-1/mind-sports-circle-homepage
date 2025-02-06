@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Intro />
-      <br></br>
+      {/* <br></br> */}
       <MainHome />
       <br></br>
       <Active />
