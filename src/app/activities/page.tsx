@@ -1,309 +1,289 @@
-"use client";
-import { ScrollProgress } from "@/components/ui/scroll-progress";
-import { useRef } from "react";
+"use client"
 
-const dummyContent = Array.from({ length: 10 }, (_, i) => (
-<p key={i} className="pb-4 font-mono text-sm text-zinc-500">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam
-  lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra
-  nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget
-  libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut
-  porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies
-  a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</p>
-));
+import Footer from "@/components/footer/footer"
+import Header from "@/components/header/header"
+import ActivitySection from "@/components/ui/activity-section"
+import { motion } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
 
-function ScrollProgressBasic1() {
-const containerRef = useRef<HTMLDivElement>(null);
+export interface Activity {
+  name: string
+  shortDescription: string
+  longDescription: string
+  imageUrl: string
+  contents: {
+    title: string
+    description: string
+  }[]
+}
 
-  return (
-  <div className="h-[350px] overflow-auto px-8 pb-16 pt-16" ref={containerRef}>
-    <div
-      className="pointer-events-none absolute bottom-0 left-0 h-12 w-full bg-white to-transparent backdrop-blur-xl [-webkit-mask-image:linear-gradient(to_top,white,transparent)] dark:bg-neutral-900" />
-    <div className="pointer-events-none absolute left-0 top-0 w-full">
-      <div className="absolute left-0 top-0 h-1 w-full bg-[#E6F4FE] dark:bg-[#111927]" />
-      <ScrollProgress containerRef={containerRef} className="absolute top-0 bg-[#0090FF]" />
-    </div>
-    {dummyContent}
-  </div>
-  );
-  }
+export const activities: Activity[] = [
+  {
+    name: "将棋",
+    shortDescription: "日本の伝統的な戦略ボードゲーム",
+    longDescription:
+      "将棋は、2人のプレイヤーが交互に駒を動かし、相手の王将を詰ませることを目指す日本の伝統的な戦略ゲームです。駒を取ると自分の駒として使える「持ち駒」システムが特徴的で、高度な戦略と読みが要求されます。",
+    imageUrl: "/shogi3.jpeg",
+    contents: [
+      {
+        title: "将棋AIの開発",
+        description:
+          "電竜戦の出場、勉強会を実施しています。最新の機械学習技術を活用し、強力な将棋AIの開発に取り組んでいます。",
+      },
+      {
+        title: "対局",
+        description:
+          "対局時計を使い、棋譜を記録した対局を行います。初心者から上級者まで、レベルに合わせた対局を楽しめます。",
+      },
+      {
+        title: "定跡研究",
+        description:
+          "将棋ソフトや本を活用して定跡の研究を行っています。古典から現代まで、様々な戦型や戦略を学び、実践に活かします。",
+      },
+    ],
+  },
+  {
+    name: "麻雀",
+    shortDescription: "4人で楽しむタイル型ゲーム",
+    longDescription:
+      "麻雀は、4人のプレイヤーが136枚の牌を使用して行うゲームです。様々な役や点数計算があり、運と戦略のバランスが重要です。社交性と計算力が養われる人気のあるマインドスポーツです。",
+    imageUrl: "/majan2.jpeg",
+    contents: [
+      {
+        title: "麻雀大会",
+        description:
+          "定期的に麻雀大会を開催し、メンバー同士の交流を深めています。初心者から上級者まで参加できる様々な形式の大会を企画しています。",
+      },
+      {
+        title: "戦術研究会",
+        description:
+          "プロ雀士の牌譜や戦術書を用いて、高度な戦略や読みの研究を行っています。メンバー同士で議論を重ね、スキルアップを図ります。",
+      },
+      {
+        title: "初心者講座",
+        description: "麻雀未経験者や初心者向けの講座を開催しています。ルールの基礎から点数計算まで、丁寧に指導します。",
+      },
+    ],
+  },
+  {
+    name: "プログラミング",
+    shortDescription: "コンピュータに指示を与えるスキル",
+    longDescription:
+      "プログラミングは、コンピュータに特定のタスクを実行させるための命令を書くプロセスです。論理的思考力と問題解決能力が鍛えられ、創造性を発揮できる分野です。様々なプログラミング言語や技術を学び、実践します。",
+    imageUrl: "/programing.png",
+    contents: [
+      {
+        title: "コーディング勉強会",
+        description:
+          "週1回のペースでコーディング勉強会を開催しています。各種プログラミング言語やフレームワークについて、メンバーが持ち回りで講師を務めます。",
+      },
+      {
+        title: "ハッカソン参加",
+        description:
+          "年に数回、外部のハッカソンイベントに参加しています。チームでアイデアを出し合い、短期間で製品やサービスのプロトタイプを開発します。",
+      },
+      {
+        title: "プロジェクト開発",
+        description:
+          "サークル独自のWebアプリケーションやモバイルアプリの開発プロジェクトを進行中です。実践的なスキルを身につけながら、ポートフォリオの作成にも役立ちます。",
+      },
+    ],
+  },
+  {
+    name: "ビリヤード",
+    shortDescription: "キューを使ってボールを打つテーブルゲーム",
+    longDescription:
+      "ビリヤードは、キューを使って白球を打ち、他の球をポケットに入れることを目指すゲームです。精密な技術と戦略が要求され、幾何学的な思考力と集中力が養われます。様々なゲームモードがあり、楽しみながらスキルアップできます。",
+    imageUrl: "/billiards.jpeg",
+    contents: [
+      {
+        title: "技術練習会",
+        description:
+          "月に2回、ビリヤードの基本技術を学ぶ練習会を開催しています。ストロークフォームやエイミングなど、プロの指導を受けながら技術向上を目指します。",
+      },
+      {
+        title: "トーナメント",
+        description:
+          "サークル内でのトーナメントを定期的に開催しています。9ボールや8ボールなど、様々な競技形式で腕を競い合います。",
+      },
+      {
+        title: "戦略研究",
+        description:
+          "ビリヤードの戦略や戦術について、ビデオ分析や討論会を行っています。プロの試合を観戦し、その技術や戦略を学びます。",
+      },
+    ],
+  },
+  {
+    name: "オセロ",
+    shortDescription: "白黒の石を裏返して陣地を広げるボードゲーム",
+    longDescription:
+      "オセロは、8x8のボード上で2人のプレイヤーが白黒の石を交互に置いていくゲームです。相手の石を挟むことで石を裏返し、最終的により多くの石を自分の色にした方が勝利します。シンプルなルールながら、深い戦略性があります。",
+    imageUrl: "/placeholder.svg?height=200&width=300",
+    contents: [
+      {
+        title: "オセロ大会",
+        description: "月1回のペースでオセロ大会を開催しています。トーナメント形式で勝者を決定し、腕を競い合います。",
+      },
+      {
+        title: "戦略講座",
+        description:
+          "オセロの基本戦略から高度なテクニックまで、経験豊富なメンバ���が講師となって戦略講座を開いています。",
+      },
+      {
+        title: "コンピュータオセロ",
+        description:
+          "オセロAIの開発に取り組んでいます。プログラミングスキルを活かし、強力なオセロプログラムの作成を目指しています。",
+      },
+    ],
+  },
+  {
+    name: "トランプ",
+    shortDescription: "52枚のカードを使用する様々なゲーム",
+    longDescription:
+      "トランプは、52枚のカードを使用して行う多様なゲームの総称です。ポーカー、ブリッジ、ブラックジャックなど、様々なゲームがあり、それぞれに異なる戦略と技術が要求されます。記憶力、計算力、心理戦など、多面的なスキルが養われます。",
+    imageUrl: "/placeholder.svg?height=200&width=300",
+    contents: [
+      {
+        title: "ポーカーナイト",
+        description:
+          "週1回のポーカーナイトを開催しています。テキサスホールデムを中心に、様々なバリエーションのポーカーを楽しみます。",
+      },
+      {
+        title: "ブリッジ教室",
+        description:
+          "コントラクトブリッジの初心者向け教室を開いています。パートナーとの協力プレイを通じて、コミュニケーション能力も養います。",
+      },
+      {
+        title: "カードマジック講座",
+        description:
+          "トランプを使ったマジックのテクニックを学ぶ講座を不定期で開催しています。手先の器用さと演技力を磨きます。",
+      },
+    ],
+  },
+  {
+    name: "eスポーツ",
+    shortDescription: "競技性の高いビデオゲーム",
+    longDescription:
+      "eスポーツは、コンピュータゲームを使った競技スポーツです。FPS、MOBA、格闘ゲームなど、様々なジャンルがあり、個人戦やチーム戦で競います。反射神経、戦略的思考、チームワークなど、多様なスキルが要求される現代的なマインドスポーツです。",
+    imageUrl: "/placeholder.svg?height=200&width=300",
+    contents: [
+      {
+        title: "チーム練習",
+        description:
+          "週3回、チームでのゲーム練習を行っています。主にLeague of LegendsやValorantなどの人気タイトルを中心に、戦略の立案や連携プレイの向上に努めています。",
+      },
+      {
+        title: "ストリーミング",
+        description:
+          "メンバーの試合や練習風景をTwitchやYouTubeでライブストリーミングしています。視聴者とのコミュニケーションも大切にしています。",
+      },
+      {
+        title: "大会参加",
+        description:
+          "地域や全国規模のeスポーツ大会に積極的に参加しています。競技経験を積むとともに、他チームとの交流も深めています。",
+      },
+    ],
+  },
+  {
+    name: "チェス",
+    shortDescription: "世界的に人気の戦略ボードゲーム",
+    longDescription:
+      "チェスは、64マスのボード上で2人のプレイヤーが16個ずつの駒を動かし、相手のキングを詰ませることを目指す戦略ゲームです。各駒に異なる動きがあり、長期的な戦略と戦術的な思考が要求されます。世界中で親しまれている知的スポーツの代表格です。",
+    imageUrl: "/placeholder.svg?height=200&width=300",
+    contents: [
+      {
+        title: "チェス教室",
+        description:
+          "初心者から中級者向けのチェス教室を週1回開催しています。基本的な駒の動きからオープニング戦略、エンドゲームのテクニックまで幅広く学びます。",
+      },
+      {
+        title: "オンライン対戦",
+        description:
+          "lichessやchess.comなどのプラットフォームを利用して、世界中のプレイヤーとオンライン対戦を楽しんでいます。定期的に部内ランキング戦も実施しています。",
+      },
+      {
+        title: "グランドマスター研究会",
+        description:
+          "有名なグランドマスターの対局を分析する研究会を月1回開催しています。高度な戦略や革新的な手順について議論し、自身の実力向上に役立てています。",
+      },
+    ],
+  },
+]
 
-  function ScrollProgressBasic2() {
-  const containerRef = useRef<HTMLDivElement>(null);
 
-    return (
-    <div className="h-[350px] overflow-auto px-8 pb-4 pt-16" ref={containerRef}>
-      <div className="border-zin-500 absolute left-0 top-0 z-10 h-10 w-full bg-white dark:bg-zinc-950">
-        <ScrollProgress className="absolute top-0 h-10 bg-zinc-200 dark:bg-zinc-800" containerRef={containerRef} />
-        <div className="absolute left-0 top-0 flex h-10 items-center space-x-6 px-8 font-[450]">
-          <a href="#" className="text-zinc-700 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white">
-            Magazine
-          </a>
-          <a href="#" className="text-zinc-700 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white">
-            Blog
-          </a>
-          <a href="#" className="text-zinc-700 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white">
-            About
-          </a>
-        </div>
-      </div>
-      {dummyContent}
-    </div>
-    );
+
+export default function Home() {
+  const [focusedSection, setFocusedSection] = useState<string | null>(null)
+  const [viewportHeight, setViewportHeight] = useState(0)
+  const sectionRefs = useRef<(HTMLElement | null)[]>([])
+
+  useEffect(() => {
+    const updateViewportHeight = () => {
+      setViewportHeight(window.innerHeight)
     }
 
-    function ScrollProgressBasic3() {
-    const containerRef = useRef<HTMLDivElement>(null);
+    updateViewportHeight()
+    window.addEventListener("resize", updateViewportHeight)
 
-      return (
-      <div className="h-[350px] overflow-auto px-8 pb-16 pt-16" ref={containerRef}>
-        <div
-          className="pointer-events-none absolute left-0 top-0 h-24 w-full bg-white to-transparent backdrop-blur-xl [-webkit-mask-image:linear-gradient(to_bottom,black,transparent)] dark:bg-neutral-950" />
-        <div className="pointer-events-none absolute left-0 top-0 w-full">
-          <div className="absolute left-0 top-0 h-0.5 w-full dark:bg-[#111111]" />
-          <ScrollProgress
-            className="absolute top-0 h-0.5 bg-[linear-gradient(to_right,rgba(0,0,0,0),#111111_75%,#111111_100%)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0),#ffffff_75%,#ffffff_100%)]"
-            containerRef={containerRef} springOptions={{ stiffness: 280, damping: 18, mass: 0.3, }} />
-        </div>
-        {dummyContent}
+    const observers = sectionRefs.current.map((ref, index) => {
+      if (!ref) return null
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setFocusedSection(activities[index].name)
+            }
+          })
+        },
+        {
+          threshold: 0.5,
+          rootMargin: `-${window.innerHeight / 4}px 0px -${window.innerHeight / 4}px 0px`,
+        },
+      )
+
+      observer.observe(ref)
+      return observer
+    })
+
+    return () => {
+      window.removeEventListener("resize", updateViewportHeight)
+      observers.forEach((observer) => observer?.disconnect())
+    }
+  }, [])
+
+  return (
+    <>
+    <Header/>
+    <main className="mt-20 container mx-auto px-4 py-8 mb-11">
+      <h1 className="text-xl md:text-5xl font-bold text-center mb-9">マインドスポーツサークル活動紹介</h1>
+      <div className="space-y-16">
+        {activities.map((activity, index) => (
+          <motion.section
+            key={activity.name}
+            id={activity.name}
+            ref={(el) => (sectionRefs.current[index] = el)}
+            initial={{ opacity: 1, y: 50 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              filter: focusedSection ? (focusedSection === activity.name ? "blur(0px)" : "blur(4px)") : "blur(0px)",
+            }}
+            transition={{ duration: 0.5 }}
+            className="scroll-mt-16"
+            style={{ minHeight: `${viewportHeight * 0.8}px` }}
+          >
+            <ActivitySection
+              activity={activity}
+              index={index}
+              isFocused={focusedSection === activity.name || focusedSection === null}
+            />
+          </motion.section>
+        ))}
       </div>
-      );
-      }
+    </main>
+    <Footer/>
+    </>
+  )
+}
 
-      export { ScrollProgressBasic1, ScrollProgressBasic2, ScrollProgressBasic3 };
-
-// "use client";
-
-// import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-// import { motion } from "framer-motion";
-// import {
-//   CircleDotIcon,
-//   ClubIcon,
-//   CodeIcon,
-//   CrosshairIcon,
-//   Dice5Icon,
-//   HeartIcon,
-//   MonitorPlayIcon,
-//   SwordsIcon
-// } from "lucide-react";
-
-// const activities = [
-//   {
-//     id: "shogi",
-//     title: "将棋",
-//     description: "日本の伝統的なマインドスポーツ。戦略的思考と先読み力を養います。",
-//     icon: SwordsIcon,
-//     image: "https://images.unsplash.com/photo-1610635967430-7157d4e3499c?auto=format&fit=crop&q=80&w=1000",
-//     details: [
-//       {
-//         title: "将棋AIの開発",
-//         description: "電竜戦の出場、勉強会を実施しています。"
-//       },
-//       {
-//         title: "対局",
-//         description: "対局時計を使い、棋譜を記録した対局を行います。"
-//       },
-//       {
-//         title: "定跡研究",
-//         description: "将棋ソフトや本を活用して定跡の研究を行っています。"
-//       }
-//     ]
-//   },
-//   {
-//     id: "mahjong",
-//     title: "麻雀",
-//     description: "計算力と運の要素が絡み合う奥深いゲーム。社交性も育めます。",
-//     icon: ClubIcon,
-//     image: "https://images.unsplash.com/photo-1596568359553-a56de6970068?auto=format&fit=crop&q=80&w=1000",
-//     details: [
-//       {
-//         title: "麻雀大会",
-//         description: "月1回の大会を開催し、実践的な技術向上を図ります。"
-//       },
-//       {
-//         title: "戦術研究会",
-//         description: "有名プロの牌譜や戦術書を用いた研究会を実施。"
-//       },
-//       {
-//         title: "初心者講座",
-//         description: "基本ルールから点数計算まで、段階的に学べる講座を提供。"
-//       }
-//     ]
-//   },
-//   {
-//     id: "programming",
-//     title: "プログラミング",
-//     description: "論理的思考とクリエイティビティを組み合わせた現代のマインドスポーツ。",
-//     icon: CodeIcon,
-//     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000",
-//     details: [
-//       {
-//         title: "ハッカソン",
-//         description: "チーム開発でアプリケーションを作成する実践的な活動。"
-//       },
-//       {
-//         title: "アルゴリズム勉強会",
-//         description: "競技プログラミングの問題を解きながら、効率的なアルゴリズムを学習。"
-//       },
-//       {
-//         title: "プロジェクト開発",
-//         description: "webアプリやゲームなど、実用的なプロジェクトの開発。"
-//       }
-//     ]
-//   },
-//   {
-//     id: "billiards",
-//     title: "ビリヤード",
-//     description: "物理学と精密な技術が求められる洗練されたスポーツ。",
-//     icon: CircleDotIcon,
-//     image: "https://images.unsplash.com/photo-1611049333678-05855264d7fc?auto=format&fit=crop&q=80&w=1000",
-//     details: [
-//       {
-//         title: "技術講習会",
-//         description: "基本ストロークからスピン技術まで、段階的な技術指導。"
-//       },
-//       {
-//         title: "練習会",
-//         description: "週2回の練習会で実践的なスキル向上。"
-//       },
-//       {
-//         title: "学内大会",
-//         description: "semester毎の学内大会開催による実戦経験の蓄積。"
-//       }
-//     ]
-//   },
-//   {
-//     id: "othello",
-//     title: "オセロ",
-//     description: "シンプルなルールながら深い戦略性を持つボードゲーム。",
-//     icon: Dice5Icon,
-//     image: "https://images.unsplash.com/photo-1611996575749-79a3a250f948?auto=format&fit=crop&q=80&w=1000",
-//     details: [
-//       {
-//         title: "戦略研究会",
-//         description: "定石や中盤戦の研究を通じて戦略的思考を育成。"
-//       },
-//       {
-//         title: "対局会",
-//         description: "週1回の対局会で実践力を養成。"
-//       },
-//       {
-//         title: "大会参加",
-//         description: "学生オセロ大会への参加と成績向上を目指す。"
-//       }
-//     ]
-//   },
-//   {
-//     id: "cards",
-//     title: "トランプ",
-//     description: "様々なゲームを楽しめる万能な道具。心理戦も楽しめます。",
-//     icon: HeartIcon,
-//     image: "https://images.unsplash.com/photo-1593634804965-0394d1324bc4?auto=format&fit=crop&q=80&w=1000",
-//     details: [
-//       {
-//         title: "ポーカー戦略会",
-//         description: "確率計算と心理戦の要素を学ぶ戦略的なゲーム研究。"
-//       },
-//       {
-//         title: "ブリッジ練習会",
-//         description: "チームワークと推理力を養うブリッジの練習。"
-//       },
-//       {
-//         title: "カードマジック",
-//         description: "手品の技術を通じて器用さと表現力を向上。"
-//       }
-//     ]
-//   },
-//   {
-//     id: "esports",
-//     title: "eスポーツ",
-//     description: "デジタル時代の新しいスポーツ。反射神経と戦略的思考が試されます。",
-//     icon: MonitorPlayIcon,
-//     image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1000",
-//     details: [
-//       {
-//         title: "チーム練習",
-//         description: "定期的なチーム練習でコミュニケーション力と連携を強化。"
-//       },
-//       {
-//         title: "戦略研究",
-//         description: "プロの試合分析や最新メタの研究会を実施。"
-//       },
-//       {
-//         title: "大会運営",
-//         description: "学内大会の企画・運営による実践経験の場を提供。"
-//       }
-//     ]
-//   },
-//   {
-//     id: "chess",
-//     title: "チェス",
-//     description: "世界で最も人気のある戦略ボードゲーム。国際交流の機会も。",
-//     icon: CrosshairIcon,
-//     image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=1000",
-//     details: [
-//       {
-//         title: "理論研究",
-//         description: "古典的な定跡から現代戦まで、体系的な戦略を学習。"
-//       },
-//       {
-//         title: "国際交流",
-//         description: "オンラインで海外のプレイヤーと対局し、国際交流。"
-//       },
-//       {
-//         title: "段級位認定",
-//         description: "FIDE公認の段級位取得を目指した実力向上プログラム。"
-//       }
-//     ]
-//   }
-// ];
-
-// export default function Home() {
-//   return (
-//     <main className="min-h-screen bg-gradient-to-b from-background to-secondary">
-//       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
-//         {activities.map((activity) => (
-//           <section
-//             key={activity.id}
-//             id={activity.id}
-//           >
-//             <motion.div
-//               initial={{ opacity: 0, y: 20 }}
-//               animate={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.5 }}
-//             >
-//               <Card className="overflow-hidden">
-//                 <CardHeader className="relative h-48">
-//                   <div className="absolute inset-0">
-//                     <img
-//                       src={activity.image}
-//                       alt={activity.title}
-//                       className="w-full h-full object-cover"
-//                     />
-//                     <div className="absolute inset-0 bg-black/40" />
-//                   </div>
-//                   <div className="relative z-10">
-//                     <activity.icon className="h-8 w-8 text-white mb-2" />
-//                     <CardTitle className="text-white text-2xl">{activity.title}</CardTitle>
-//                   </div>
-//                 </CardHeader>
-//                 <CardContent className="p-6">
-//                   <CardDescription className="text-base mb-6">{activity.description}</CardDescription>
-//                   <div className="space-y-4">
-//                     {activity.details.map((detail, i) => (
-//                       <div key={i} className="border-l-2 border-primary pl-4">
-//                         <h3 className="font-semibold text-lg mb-1">{detail.title}</h3>
-//                         <p className="text-muted-foreground">{detail.description}</p>
-//                       </div>
-//                     ))}
-//                   </div>
-//                 </CardContent>
-//               </Card>
-//             </motion.div>
-//           </section>
-//         ))}
-//       </div>
-//     </main>
-//   );
-// }
