@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -15,8 +16,9 @@ export default function Header() {
     };
 
     return (
-        <header className="fixed top-0 left-0 w-full z-[500] py-4 px-7 md:py-6 md:px-10 flex justify-between items-center text-black backdrop-blur-md bg-opacity-70">
-            <Link className="text-lg md:text-2xl font-bold" href="/" onClick={handleMenuClose}>
+        <header className="fixed top-0 left-0 w-full z-[700] py-4 pl-3 pr-5 md:py-6 md:px-10 flex justify-between items-center text-black backdrop-blur-md bg-opacity-70">
+            <Link className="flex md:gap-4 text-lg md:text-2xl font-bold" href="/" onClick={handleMenuClose}>
+                <Image src="mindsports/mainlogo-black.svg" alt="logo" width={40} height={40}/>
                 マインドスポーツサークル
                 {/* <Image src="/github-mark.png" width={30} height={30} alt="Tailwind CSS" /> */}
             </Link>
@@ -41,7 +43,7 @@ export default function Header() {
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={handleMenuClose} href="/#Skill" className="hover:text-gray-300 duration-300">
+                        <Link onClick={handleMenuClose} href="/achievements" className="hover:text-gray-300 duration-300">
                             実績
                         </Link>
                     </li>

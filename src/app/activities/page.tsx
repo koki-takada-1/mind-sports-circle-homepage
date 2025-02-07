@@ -2,6 +2,7 @@
 
 import Footer from "@/components/footer/footer"
 import Header from "@/components/header/header"
+import { RetroGrid } from "@/components/retro-grid"
 import ActivitySection from "@/components/ui/activity-section"
 import { motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
@@ -118,7 +119,7 @@ export const activities: Activity[] = [
     shortDescription: "白黒の石を裏返して陣地を広げるボードゲーム",
     longDescription:
       "オセロは、8x8のボード上で2人のプレイヤーが白黒の石を交互に置いていくゲームです。相手の石を挟むことで石を裏返し、最終的により多くの石を自分の色にした方が勝利します。シンプルなルールながら、深い戦略性があります。",
-    imageUrl: "/placeholder.svg?height=200&width=300",
+    imageUrl: "/mindsports/reversi.png",
     contents: [
       {
         title: "オセロ大会",
@@ -141,7 +142,7 @@ export const activities: Activity[] = [
     shortDescription: "52枚のカードを使用する様々なゲーム",
     longDescription:
       "トランプは、52枚のカードを使用して行う多様なゲームの総称です。ポーカー、ブリッジ、ブラックジャックなど、様々なゲームがあり、それぞれに異なる戦略と技術が要求されます。記憶力、計算力、心理戦など、多面的なスキルが養われます。",
-    imageUrl: "/placeholder.svg?height=200&width=300",
+    imageUrl: "/mindsports/trump2.png",
     contents: [
       {
         title: "ポーカーナイト",
@@ -165,7 +166,7 @@ export const activities: Activity[] = [
     shortDescription: "競技性の高いビデオゲーム",
     longDescription:
       "eスポーツは、コンピュータゲームを使った競技スポーツです。FPS、MOBA、格闘ゲームなど、様々なジャンルがあり、個人戦やチーム戦で競います。反射神経、戦略的思考、チームワークなど、多様なスキルが要求される現代的なマインドスポーツです。",
-    imageUrl: "/placeholder.svg?height=200&width=300",
+    imageUrl: "/e-sports.png",
     contents: [
       {
         title: "チーム練習",
@@ -255,14 +256,15 @@ export default function Home() {
   return (
     <>
     <Header/>
-    <main className="mt-20 container mx-auto px-4 py-8 mb-11">
-      <h1 className="text-xl md:text-5xl font-bold text-center mb-9">マインドスポーツサークル活動紹介</h1>
+    <RetroGrid className="absolute inset-0 z-0"/>
+    <main className="relative mt-12 md:mt-20 container mx-auto px-4 py-8 mb-11 z-10">
+      <h1 className="text-xl md:text-5xl font-bold text-center mb-14">マインドスポーツサークル活動紹介</h1>
       <div className="space-y-16">
         {activities.map((activity, index) => (
           <motion.section
             key={activity.name}
             id={activity.name}
-            ref={(el) => (sectionRefs.current[index] = el)}
+            ref={(el) => {sectionRefs.current[index] = el}}
             initial={{ opacity: 1, y: 50 }}
             animate={{
               opacity: 1,
@@ -282,6 +284,7 @@ export default function Home() {
         ))}
       </div>
     </main>
+
     <Footer/>
     </>
   )

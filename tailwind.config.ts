@@ -90,14 +90,14 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		keyframes: {
-			aurora: {
-				from: {
-				  backgroundPosition: "50% 50%, 50% 50%",
-				},
-				to: {
-				  backgroundPosition: "350% 50%, 350% 50%",
-				},
-			  },
+  			aurora: {
+  				from: {
+  					backgroundPosition: '50% 50%, 50% 50%'
+  				},
+  				to: {
+  					backgroundPosition: '350% 50%, 350% 50%'
+  				}
+  			},
   			marquee: {
   				from: {
   					transform: 'translateX(0)'
@@ -218,6 +218,14 @@ export default {
   				'50%': {
   					boxShadow: '0 0 0 8px var(--pulse-color)'
   				}
+  			},
+  			grid: {
+  				'0%': {
+  					transform: 'translateY(-50%)'
+  				},
+  				'100%': {
+  					transform: 'translateY(0)'
+  				}
   			}
   		},
   		animation: {
@@ -227,11 +235,10 @@ export default {
   			shine: 'shine var(--duration) infinite linear',
   			'background-position-spin': 'background-position-spin 3000ms infinite alternate',
   			pulse: 'pulse var(--duration) ease-out infinite',
-			aurora: "aurora 60s linear infinite",
+  			aurora: 'aurora 60s linear infinite',
+  			grid: 'grid 15s linear infinite'
   		},
-  		backgroundImage: {
-
-  		}
+  		backgroundImage: {}
   	}
   },
   plugins: [require("tailwindcss-animate"), addVariablesForColors],

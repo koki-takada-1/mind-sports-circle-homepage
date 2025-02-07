@@ -22,7 +22,7 @@ interface ActivitySectionProps {
 
 export default function ActivitySection({ activity, index, isFocused }: ActivitySectionProps) {
   return (
-    <Card className={`md:mt-32 transition-all duration-300 ${isFocused ? "scale-105" : ""}`}>
+    <Card className={`bg-white border border-gray-400 rounded-xl md:py-7 md:px-6 md:mt-32 transition-all duration-300 ${isFocused ? "scale-105" : ""}`}>
       <CardHeader>
         <CardTitle className="md:text-3xl">{activity.name}</CardTitle>
         <CardDescription className="md:text-xl">{activity.shortDescription}</CardDescription>
@@ -39,11 +39,11 @@ export default function ActivitySection({ activity, index, isFocused }: Activity
             />
           </div>
           <div className="md:w-2/3">
-            <p className="mb-4">{activity.longDescription}</p>
+            <p className="mb-4 md:text-lg">{activity.longDescription}</p>
             {activity.contents.map((content, i) => (
               <div key={i} className="mb-4">
-                <h3 className="text-lg font-semibold mb-2">{content.title}</h3>
-                <p>{content.description}</p>
+                <h3 className="text-lg md:text-xl font-semibold mb-2">{content.title}</h3>
+                <p className="md:text-lg">{content.description}</p>
               </div>
             ))}
           </div>
