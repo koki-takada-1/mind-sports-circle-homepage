@@ -95,7 +95,7 @@ export const activities: Activity[] = [
     shortDescription: "キューを使ってボールを打つテーブルゲーム",
     longDescription:
       "ビリヤードは、キューを使って白球を打ち、他の球をポケットに入れることを目指すゲームです。精密な技術と戦略が要求され、幾何学的な思考力と集中力が養われます。様々なゲームモードがあり、楽しみながらスキルアップできます。",
-    imageUrl: "/billiards.jpeg",
+    imageUrl: "/billiards.jpg",
     contents: [
       {
         title: "技術練習会",
@@ -190,7 +190,7 @@ export const activities: Activity[] = [
     shortDescription: "世界的に人気の戦略ボードゲーム",
     longDescription:
       "チェスは、64マスのボード上で2人のプレイヤーが16個ずつの駒を動かし、相手のキングを詰ませることを目指す戦略ゲームです。各駒に異なる動きがあり、長期的な戦略と戦術的な思考が要求されます。世界中で親しまれている知的スポーツの代表格です。",
-    imageUrl: "/placeholder.svg?height=200&width=300",
+    imageUrl: "/chess-board.svg",
     contents: [
       {
         title: "チェス教室",
@@ -256,7 +256,7 @@ export default function Home() {
   return (
     <>
     <Header/>
-    <RetroGrid className="absolute inset-0 z-0"/>
+    {/* <RetroGrid className="absolute inset-0 z-0"/> */}
     <main className="relative mt-12 md:mt-20 container mx-auto px-4 py-8 mb-11 z-10">
       <h1 className="text-xl md:text-5xl font-bold text-center mb-14">マインドスポーツサークル活動紹介</h1>
       <div className="space-y-16">
@@ -275,6 +275,7 @@ export default function Home() {
             className="scroll-mt-16"
             style={{ minHeight: `${viewportHeight * 0.8}px` }}
           >
+            <RetroGrid className="absolute inset-0 z-0"/>
             <ActivitySection
               activity={activity}
               index={index}

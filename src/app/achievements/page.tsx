@@ -51,23 +51,71 @@ export default function Achievement() {
       ),
     },
     {
-      title: "2024/6月",
+      title: "2024年6月",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xl md:text-2xl mb-8">
             マインドスポーツサークルに名前を改名し，マインドスポーツサークルが東京国際工科専門職大学公認化
           </p>
-
+          <p className="text-neutral-800 dark:text-neutral-200 text-xl md:text-2xl mb-8">
+            メンバーがクリプティッドなど様々なボードゲームを用意し，活動の幅を拡大
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <Image
+              src="/mindsports/mind.jpeg"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="/mindsports/shogi4.jpeg"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
         </div>
       ),
     },
     {
-      title: "2024/5月",
+      title: "2024年5月",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xl md:text-2xl mb-8">
             将棋サークルとして活動を開始
           </p>
+          <div className="grid grid-cols-2 gap-4">
+          <Image
+              src="/shogi1.jpeg"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="/shogi2.jpeg"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="/shogi3.jpeg"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="/shogi4.jpeg"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
 
         </div>
       ),
@@ -76,12 +124,14 @@ export default function Achievement() {
   return (
     <>
     <Header/>
-    <div className="min-h-screen w-full">
-      <div className="absolute top-0 left-0 w-full">
-        <Timeline data={data} />
-        <Footer/>
-      </div>
-    </div>
+    <main className="flex-grow">
+        <div className="min-h-screen w-full">
+        <div className="absolute top-0 left-0 w-full">
+            <Timeline data={data} />
+            <Footer/>
+        </div>
+        </div>
+    </main>
     </>
   );
 }

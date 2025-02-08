@@ -19,6 +19,12 @@ const reviews = [
     img: "/majan1.jpeg",
   },
   {
+    img: "mindsports/mind.jpeg",
+  },
+  {
+    img: "mindsports/shogi4.jpeg",
+  },
+  {
     img: "/majan2.jpeg",
   },
   {
