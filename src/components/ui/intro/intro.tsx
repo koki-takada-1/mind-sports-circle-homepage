@@ -65,10 +65,7 @@ export function Intro() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl">
       <Header />
-      <div className="">
-
-      </div>
-      <Marquee pauseOnHover className="[--duration:20s] [--gap:1rem]">
+      <Marquee pauseOnHover className="[--duration:20s] [--gap:1rem] mt-16 md:mt-20">
         {firstRow.map((review, index) => (
           <ReviewCard key={index} {...review} />
         ))}

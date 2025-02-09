@@ -23,23 +23,23 @@ export const activities: Activity[] = [
     name: "将棋",
     shortDescription: "日本の伝統的な戦略ボードゲーム",
     longDescription:
-      "将棋は、2人のプレイヤーが交互に駒を動かし、相手の王将を詰ませることを目指す日本の伝統的な戦略ゲームです。駒を取ると自分の駒として使える「持ち駒」システムが特徴的で、高度な戦略と読みが要求されます。",
+      "将棋は、2人のプレイヤーが交互に駒を動かし、相手の王将を詰ますことを目指す日本の伝統的な戦略ゲームです。駒を取ると自分の駒として使える「持ち駒」システムが特徴的で、高度な戦略と読みが要求されます。",
     imageUrl: "/shogi3.jpeg",
     contents: [
       {
         title: "将棋AIの開発",
         description:
-          "電竜戦の出場、勉強会を実施しています。最新の機械学習技術を活用し、強力な将棋AIの開発に取り組んでいます。",
+          "機械学習の技術を使った将棋AIの開発を行なっています。電竜戦の出場、コンピュータ将棋連続対局場所(floodgate)への参加を行なっています。",
       },
       {
         title: "対局",
         description:
-          "対局時計を使い、棋譜を記録した対局を行います。初心者から上級者まで、レベルに合わせた対局を楽しめます。",
+          "対局時計を使い、棋譜を記録した対局を行います。初心者から上級者まで、レベルに合わせた対局を楽しめます。将棋ソフトや本を活用して定跡の研究なども行なっています。",
       },
       {
-        title: "定跡研究",
+        title: "道場対局",
         description:
-          "将棋ソフトや本を活用して定跡の研究を行っています。古典から現代まで、様々な戦型や戦略を学び、実践に活かします。",
+          "東京にある様々な将棋カフェ、将棋道場で対局を行なっています。企業との交流戦など、サークル外の方々と対局することで、棋力向上に励みます。",
       },
     ],
   },
@@ -61,8 +61,8 @@ export const activities: Activity[] = [
           "プロ雀士の牌譜や戦術書を用いて、高度な戦略や読みの研究を行っています。メンバー同士で議論を重ね、スキルアップを図ります。",
       },
       {
-        title: "初心者講座",
-        description: "麻雀未経験者や初心者向けの講座を開催しています。ルールの基礎から点数計算まで、丁寧に指導します。",
+        title: "初心者大歓迎",
+        description: "麻雀未経験者や初心者の方々も大歓迎です。ルールの基礎から点数計算まで、丁寧に指導します。",
       },
     ],
   },
@@ -74,19 +74,19 @@ export const activities: Activity[] = [
     imageUrl: "/programing.png",
     contents: [
       {
-        title: "コーディング勉強会",
+        title: "競技プログラミング",
         description:
-          "週1回のペースでコーディング勉強会を開催しています。各種プログラミング言語やフレームワークについて、メンバーが持ち回りで講師を務めます。",
+          "競技プログラミングはアルゴリズムの設計能力を競う遊びです。週一で開催されるコンテストに参加して問題を解きます。",
       },
       {
-        title: "ハッカソン参加",
+        title: "アルゴリズム勉強会",
         description:
-          "年に数回、外部のハッカソンイベントに参加しています。チームでアイデアを出し合い、短期間で製品やサービスのプロトタイプを開発します。",
+          "アルゴリズムの設計能力向上に興味がある人たちを集め、アルゴリズムやデータ構造などのノウハウを共有します。また、サークル顧問の飛澤先生は数理情報の専門家で、指導を受けることもできます。",
       },
       {
         title: "プロジェクト開発",
         description:
-          "サークル独自のWebアプリケーションやモバイルアプリの開発プロジェクトを進行中です。実践的なスキルを身につけながら、ポートフォリオの作成にも役立ちます。",
+          "サークル独自のWebアプリケーションやモバイルアプリの開発プロジェクトを進行中です。実践的なスキルを身につけながら、就活ポートフォリオの作成にも役立ちます。",
       },
     ],
   },
@@ -100,12 +100,12 @@ export const activities: Activity[] = [
       {
         title: "技術練習会",
         description:
-          "月に2回、ビリヤードの基本技術を学ぶ練習会を開催しています。ストロークフォームやエイミングなど、プロの指導を受けながら技術向上を目指します。",
+          "ビリヤードの基本技術を学ぶ練習会を開催する予定です。ストロークフォームやエイミングなど、技術向上を目指します。",
       },
       {
         title: "トーナメント",
         description:
-          "サークル内でのトーナメントを定期的に開催しています。9ボールや8ボールなど、様々な競技形式で腕を競い合います。",
+          "サークル内でのトーナメントを定期的に開催する予定です。9ボールや8ボールなど、様々な競技形式で腕を競い合います。",
       },
       {
         title: "戦略研究",
@@ -115,52 +115,49 @@ export const activities: Activity[] = [
     ],
   },
   {
-    name: "オセロ",
-    shortDescription: "白黒の石を裏返して陣地を広げるボードゲーム",
+    name: "近代ボードゲーム",
+    shortDescription: "最近流行の世界のボードゲームを楽しみましょう。",
     longDescription:
-      "オセロは、8x8のボード上で2人のプレイヤーが白黒の石を交互に置いていくゲームです。相手の石を挟むことで石を裏返し、最終的により多くの石を自分の色にした方が勝利します。シンプルなルールながら、深い戦略性があります。",
-    imageUrl: "/mindsports/reversi.png",
+      "近代ボードゲームは最近ボードゲームカフェなどで流行しているボードゲームです。内容物とゲームルールが1つの作品/商品となっていてカタンやごきぶりポーカーなどがこれに該当します。",
+    imageUrl: "/mindsports/mind.jpeg",
     contents: [
       {
-        title: "オセロ大会",
-        description: "月1回のペースでオセロ大会を開催しています。トーナメント形式で勝者を決定し、腕を競い合います。",
+        title: "メイン活動",
+        description: "将棋や麻雀に並ぶ、マインドスポーツサークルのメイン活動です。サークルの備品としてクリプティッドやごきぶりポーカーがあります。",
       },
       {
-        title: "戦略講座",
+        title: "楽しく遊ぶ",
         description:
-          "オセロの基本戦略から高度なテクニックまで、経験豊富なメンバ���が講師となって戦略講座を開いています。",
+          "メンバーとの交流やコミュニケーションも楽しみながらボードゲームを使って楽しく遊びます。戦略を考えて真剣に勝負するのも一興です。",
       },
       {
-        title: "コンピュータオセロ",
+        title: "様々な作品・商品の探求",
         description:
-          "オセロAIの開発に取り組んでいます。プログラミングスキルを活かし、強力なオセロプログラムの作成を目指しています。",
+          "同じボードゲームばかりでなく、様々なボードゲーム作品との出会いを楽しみながらボードゲームを探求します。",
       },
     ],
   },
   {
     name: "トランプ",
-    shortDescription: "52枚のカードを使用する様々なゲーム",
-    longDescription:
-      "トランプは、52枚のカードを使用して行う多様なゲームの総称です。ポーカー、ブリッジ、ブラックジャックなど、様々なゲームがあり、それぞれに異なる戦略と技術が要求されます。記憶力、計算力、心理戦など、多面的なスキルが養われます。",
+    shortDescription: "仲間と楽しむ多彩なカードゲーム",
+    longDescription: "トランプは、仲間とワイワイ楽しめる多様なカードゲームの総称です。ポーカー、ブリッジ、ブラックジャックなど、それぞれ異なる駆け引きや戦略があり、遊ぶたびに新たな発見があります。みんなで盛り上がれるゲームを通じて、スリルや知的な楽しさを味わいましょう。",
     imageUrl: "/mindsports/trump2.png",
     contents: [
-      {
-        title: "ポーカーナイト",
-        description:
-          "週1回のポーカーナイトを開催しています。テキサスホールデムを中心に、様々なバリエーションのポーカーを楽しみます。",
-      },
-      {
-        title: "ブリッジ教室",
-        description:
-          "コントラクトブリッジの初心者向け教室を開いています。パートナーとの協力プレイを通じて、コミュニケーション能力も養います。",
-      },
-      {
-        title: "カードマジック講座",
-        description:
-          "トランプを使ったマジックのテクニックを学ぶ講座を不定期で開催しています。手先の器用さと演技力を磨きます。",
-      },
-    ],
-  },
+        {
+            "title": "ポーカー",
+            "description": "テキサスホールデムを中心に、いろいろなルールのポーカーを楽しんでいます。読み合いや駆け引きで盛り上がること間違いなし！"
+        },
+        {
+            "title": "ブリッジ",
+            "description": "パートナーと協力しながらプレイする奥深いゲーム、ブリッジを楽しめます。チームワークと戦略が鍵となる、知的な遊びです。"
+        },
+        {
+            "title": "カードマジック",
+            "description": "トランプを使ったマジックで、仲間を驚かせてみませんか？簡単なトリックから本格的な技まで、みんなで楽しく練習できます。"
+        }
+    ]
+}
+,
   {
     name: "eスポーツ",
     shortDescription: "競技性の高いビデオゲーム",
@@ -169,20 +166,20 @@ export const activities: Activity[] = [
     imageUrl: "/e-sports.png",
     contents: [
       {
-        title: "チーム練習",
+        title: "フォートナイト",
         description:
-          "週3回、チームでのゲーム練習を行っています。主にLeague of LegendsやValorantなどの人気タイトルを中心に、戦略の立案や連携プレイの向上に努めています。",
+          "メンバー内にフォートナイトユーザーがいるので、フォートナイトなども活動範囲に入れる予定です。",
       },
       {
-        title: "ストリーミング",
+        title: "本学におけるeスポーツの可能性",
         description:
-          "メンバーの試合や練習風景をTwitchやYouTubeでライブストリーミングしています。視聴者とのコミュニケーションも大切にしています。",
+          "本学では、競技性の高いPCゲーム（Apex Legends、VALORANT）やスマブラのプレイヤーが多く、私たちはeスポーツを通じた学生間の交流を深める場を積極的に作っていきます。",
       },
-      {
-        title: "大会参加",
-        description:
-          "地域や全国規模のeスポーツ大会に積極的に参加しています。競技経験を積むとともに、他チームとの交流も深めています。",
-      },
+      // {
+      //   title: "大会参加",
+      //   description:
+      //     "地域や全国規模のeスポーツ大会に積極的に参加しています。競技経験を積むとともに、他チームとの交流も深めています。",
+      // },
     ],
   },
   {
@@ -193,29 +190,29 @@ export const activities: Activity[] = [
     imageUrl: "/chess-board.svg",
     contents: [
       {
-        title: "チェス教室",
+        title: "チェス対局",
         description:
-          "初心者から中級者向けのチェス教室を週1回開催しています。基本的な駒の動きからオープニング戦略、エンドゲームのテクニックまで幅広く学びます。",
+          "チェスクロックを使って対局します。AIの検討を使用しながら、感想戦も行います。",
       },
       {
         title: "オンライン対戦",
         description:
-          "lichessやchess.comなどのプラットフォームを利用して、世界中のプレイヤーとオンライン対戦を楽しんでいます。定期的に部内ランキング戦も実施しています。",
+          "lichessやchess.comなどのプラットフォームを利用して、世界中のプレイヤーとオンライン対戦を楽しんでいます。定期的に部内ランキング戦も実施予定です。",
       },
       {
         title: "グランドマスター研究会",
         description:
-          "有名なグランドマスターの対局を分析する研究会を月1回開催しています。高度な戦略や革新的な手順について議論し、自身の実力向上に役立てています。",
+          "有名なグランドマスターの対局を分析する研究会を開催する予定です。高度な戦略や革新的な手順について議論し、自身の実力向上に役立てています。",
       },
     ],
   },
 ]
 
 
-
 export default function Home() {
   const [focusedSection, setFocusedSection] = useState<string | null>(null)
   const [viewportHeight, setViewportHeight] = useState(0)
+  const [isLoading, setIsLoading] = useState(true) // ローディング状態を追加
   const sectionRefs = useRef<(HTMLElement | null)[]>([])
 
   useEffect(() => {
@@ -247,47 +244,154 @@ export default function Home() {
       return observer
     })
 
+    // ページが完全にレンダリングされた後にローディングを解除
+    setIsLoading(false)
+
     return () => {
       window.removeEventListener("resize", updateViewportHeight)
       observers.forEach((observer) => observer?.disconnect())
     }
   }, [])
 
+  useEffect(() => {
+    if (!isLoading) {
+      const hash = window.location.hash
+      if (hash) {
+        const id = decodeURIComponent(hash.substring(1))
+        const element = document.getElementById(id)
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" })
+        }
+      }
+    }
+  }, [isLoading]) // ローディングが完了した後に実行
+
+  // if (isLoading) {
+  //   return <div>Loading...</div> // ローディング中の表示
+  // }
+
   return (
     <>
-    <Header/>
-    {/* <RetroGrid className="absolute inset-0 z-0"/> */}
-    <main className="relative mt-12 md:mt-20 container mx-auto px-4 py-8 mb-11 z-10">
-      <h1 className="text-xl md:text-5xl font-bold text-center mb-14">マインドスポーツサークル活動紹介</h1>
-      <div className="space-y-16">
-        {activities.map((activity, index) => (
-          <motion.section
-            key={activity.name}
-            id={activity.name}
-            ref={(el) => {sectionRefs.current[index] = el}}
-            initial={{ opacity: 1, y: 50 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              filter: focusedSection ? (focusedSection === activity.name ? "blur(0px)" : "blur(4px)") : "blur(0px)",
-            }}
-            transition={{ duration: 0.5 }}
-            className="scroll-mt-16"
-            style={{ minHeight: `${viewportHeight * 0.8}px` }}
-          >
-            <RetroGrid className="absolute inset-0 z-0"/>
-            <ActivitySection
-              activity={activity}
-              index={index}
-              isFocused={focusedSection === activity.name || focusedSection === null}
-            />
-          </motion.section>
-        ))}
-      </div>
-    </main>
-
-    <Footer/>
+      <Header/>
+      <main className="relative mt-12 md:mt-20 container mx-auto px-4 py-8 mb-11 z-10">
+        <h1 className="text-xl md:text-5xl font-bold text-center mb-14">マインドスポーツサークル活動紹介</h1>
+        <div className="space-y-16">
+          {activities.map((activity, index) => (
+            <motion.section
+              key={activity.name}
+              id={activity.name}
+              ref={(el) => {sectionRefs.current[index] = el}}
+              initial={{ opacity: 1, y: 50 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                filter: focusedSection ? (focusedSection === activity.name ? "blur(0px)" : "blur(4px)") : "blur(0px)",
+              }}
+              transition={{ duration: 0.5 }}
+              className="scroll-mt-44"
+              style={{ minHeight: `${viewportHeight * 0.8}px` }}
+            >
+              <RetroGrid className="absolute inset-0 z-0"/>
+              <section id={activity.name}>
+                <ActivitySection
+                  activity={activity}
+                  index={index}
+                  isFocused={focusedSection === activity.name || focusedSection === null}
+                />
+              </section>
+            </motion.section>
+          ))}
+        </div>
+      </main>
+      <Footer/>
     </>
   )
 }
+
+// export default function Home() {
+//   const [focusedSection, setFocusedSection] = useState<string | null>(null)
+//   const [viewportHeight, setViewportHeight] = useState(0)
+//   const sectionRefs = useRef<(HTMLElement | null)[]>([])
+
+//   useEffect(() => {
+//     const updateViewportHeight = () => {
+//       setViewportHeight(window.innerHeight)
+//     }
+
+//     updateViewportHeight()
+//     window.addEventListener("resize", updateViewportHeight)
+
+//     const observers = sectionRefs.current.map((ref, index) => {
+//       if (!ref) return null
+
+//       const observer = new IntersectionObserver(
+//         (entries) => {
+//           entries.forEach((entry) => {
+//             if (entry.isIntersecting) {
+//               setFocusedSection(activities[index].name)
+//             }
+//           })
+//         },
+//         {
+//           threshold: 0.5,
+//           rootMargin: `-${window.innerHeight / 4}px 0px -${window.innerHeight / 4}px 0px`,
+//         },
+//       )
+
+//       observer.observe(ref)
+//       return observer
+//     })
+//     const hash = window.location.hash
+//     if (hash) {
+//       const id = decodeURIComponent(hash.substring(1)); // '#'を除去してデコード
+//       const element = document.getElementById(id)
+//       if (element) {
+//         element.scrollIntoView({ behavior: "smooth" }) // スムーズにスクロール
+//       }
+//     }
+//     return () => {
+//       window.removeEventListener("resize", updateViewportHeight)
+//       observers.forEach((observer) => observer?.disconnect())
+//     }
+//   }, [])
+
+//   return (
+//     <>
+//     <Header/>
+//     {/* <RetroGrid className="absolute inset-0 z-0"/> */}
+//     <main className="relative mt-12 md:mt-20 container mx-auto px-4 py-8 mb-11 z-10">
+//       <h1 className="text-xl md:text-5xl font-bold text-center mb-14">マインドスポーツサークル活動紹介</h1>
+//       <div className="space-y-16">
+//         {activities.map((activity, index) => (
+//           <motion.section
+//             key={activity.name}
+//             id={activity.name}
+//             ref={(el) => {sectionRefs.current[index] = el}}
+//             initial={{ opacity: 1, y: 50 }}
+//             animate={{
+//               opacity: 1,
+//               y: 0,
+//               filter: focusedSection ? (focusedSection === activity.name ? "blur(0px)" : "blur(4px)") : "blur(0px)",
+//             }}
+//             transition={{ duration: 0.5 }}
+//             className="scroll-mt-12"
+//             style={{ minHeight: `${viewportHeight * 0.8}px` }}
+//           >
+//             <RetroGrid className="absolute inset-0 z-0"/>
+//             <section id={activity.name}>
+//               <ActivitySection
+//                 activity={activity}
+//                 index={index}
+//                 isFocused={focusedSection === activity.name || focusedSection === null}
+//               />
+//             </section>
+//           </motion.section>
+//         ))}
+//       </div>
+//     </main>
+
+//     <Footer/>
+//     </>
+//   )
+// }
 

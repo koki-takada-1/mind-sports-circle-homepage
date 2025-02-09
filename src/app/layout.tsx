@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
+import { LoadingProvider } from "@/app/loading-provider";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 
@@ -29,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${notoSansJp.className} flex flex-col min-h-screen`}>{children}</body>
+      <body className={`${notoSansJp.className} flex flex-col min-h-screen`}>
+      <LoadingProvider>{children}</LoadingProvider>
+      </body>
     </html>
   );
 }

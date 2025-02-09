@@ -83,17 +83,17 @@ const Footer: React.FC = () => {
               <nav>
                 <ul className="flex space-x-6">
                   <li>
-                    <Link href="#" className="hover:text-gray-300 transition-colors text-lg">
+                    <Link href="/activities" className="hover:text-gray-300 transition-colors text-lg">
                       活動紹介
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-gray-300 transition-colors text-lg">
+                    <Link href="/achievements" className="hover:text-gray-300 transition-colors text-lg">
                       実績
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-gray-300 transition-colors text-lg">
+                    <Link href="" className="hover:text-gray-300 transition-colors text-lg">
                       Wiki
                     </Link>
                   </li>
@@ -108,21 +108,21 @@ const Footer: React.FC = () => {
             <div className="flex justify-between items-center pb-10">
               <p>&copy; マインドスポーツサークル.  All rights reserved.</p>
               <div className="flex space-x-4 gap-10">
-                <Link href="#" className="hover:text-gray-300 transition-colors">
-                  <div className="logo-container">
-                    <Image src="/X.svg" alt="X" width={40} height={40} className="logo-image" />
-                  </div>
-                </Link>
-                <Link href="#" className="hover:text-gray-300 transition-colors">
-                  <div className="logo-container">
-                    <Image src="/github-mark-white.svg" alt="Github" width={40} height={40} className="logo-image" />
-                  </div>
-                </Link>
-                <Link href="#" className="hover:text-gray-300 transition-colors">
-                  <div className="logo-container">
-                    <Image src="/youtube.svg" alt="Youtube" width={40} height={40} className="logo-image" />
-                  </div>
-                </Link>
+              <Link href="https://x.com/i/flow/login?redirect_after_login=%2FIputClub23588" className="hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">
+                <div className="logo-container">
+                  <Image src="/X.svg" alt="X" width={40} height={40} className="logo-image" />
+                </div>
+              </Link>
+              <Link href="https://github.com/mind-sports-circle" className="hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">
+                <div className="logo-container">
+                  <Image src="/github-mark-white.svg" alt="Github" width={40} height={40} className="logo-image" />
+                </div>
+              </Link>
+              <Link href="https://www.youtube.com/@IPUT%E3%83%9E%E3%82%A4%E3%83%B3%E3%83%89%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84%E3%82%B5%E3%83%BC%E3%82%AF%E3%83%AB" className="hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">
+                <div className="logo-container">
+                  <Image src="/youtube.svg" alt="Youtube" width={40} height={40} className="logo-image" />
+                </div>
+              </Link>
               </div>
             </div>
           </>
@@ -154,17 +154,17 @@ const Footer: React.FC = () => {
               </ul>
             </nav>
             <div className="flex justify-center space-x-4 mb-6">
-              <Link href="#" className="hover:text-gray-300 transition-colors">
+              <Link href="https://x.com/i/flow/login?redirect_after_login=%2FIputClub23588" className="hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">
                 <div className="logo-container">
                   <Image src="/X.svg" alt="X" width={40} height={40} className="logo-image" />
                 </div>
               </Link>
-              <Link href="#" className="hover:text-gray-300 transition-colors">
+              <Link href="https://github.com/mind-sports-circle" className="hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">
                 <div className="logo-container">
                   <Image src="/github-mark-white.svg" alt="Github" width={40} height={40} className="logo-image" />
                 </div>
               </Link>
-              <Link href="#" className="hover:text-gray-300 transition-colors">
+              <Link href="https://www.youtube.com/@IPUT%E3%83%9E%E3%82%A4%E3%83%B3%E3%83%89%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84%E3%82%B5%E3%83%BC%E3%82%AF%E3%83%AB" className="hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">
                 <div className="logo-container">
                   <Image src="/youtube.svg" alt="Youtube" width={40} height={40} className="logo-image" />
                 </div>

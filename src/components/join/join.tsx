@@ -7,12 +7,13 @@
 import { BoxReveal } from "@/components/ui/box-reveal"
 import { NeonGradientCard } from "@/components/ui/neon-gradient-card"
 import { PulsatingButton } from "@/components/ui/pulsating-button"
-import { WarpBackground } from "@/components/warp-background"
+// import { WarpBackground } from "@/components/warp-background"
 import Link from "next/link"
 
 export default function Join() {
   return (
-    <WarpBackground>
+    <>
+    {/* <WarpBackground> */}
     <div className="mt-40 mb-11 lg:mt-72 text-4xl md:text-6xl lg:text-8xl text-center lg:mb-32 font-bold">Join our mind sports journey</div>
     <div className="flex justify-center w-full h-full mb-20 md:mb-48">
 
@@ -30,6 +31,6 @@ export default function Join() {
             </div>
         </NeonGradientCard>
     </div>
-    </WarpBackground>
+    </>
   )
 }
