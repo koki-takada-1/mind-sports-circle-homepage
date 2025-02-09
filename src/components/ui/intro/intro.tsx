@@ -4,6 +4,7 @@ import Header from "@/components/header/header";
 import { Marquee } from "@/components/ui/marquee";
 import { TypingAnimation } from "@/components/ui/typing-animation";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import { TextAnimateDemo } from "./text";
 const reviews = [
   {
@@ -19,10 +20,10 @@ const reviews = [
     img: "/majan1.jpeg",
   },
   {
-    img: "mindsports/mind.jpeg",
+    img: "/mindsports/mind.jpeg",
   },
   {
-    img: "mindsports/shogi4.jpeg",
+    img: "/mindsports/shogi4.jpeg",
   },
   {
     img: "/majan2.jpeg",
@@ -56,7 +57,14 @@ const ReviewCard = ({
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
       )}
     >
-      <img className="w-full h-full object-cover rounded-xl" alt="Review Image" src={img} />
+      {/* <img className="w-full h-full object-cover rounded-xl" alt="Review Image" src={img} /> */}
+      <Image
+        className="w-full h-full object-cover rounded-xl"
+        alt="review image"
+        src={img}
+        layout="fill" // 画像を親要素にフィットさせる
+        objectFit="cover" // 画像の表示方法を指定
+      />
     </figure>
   );
 };

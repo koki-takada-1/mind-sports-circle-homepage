@@ -74,7 +74,7 @@ export default function Header() {
                     <li>
                         <a href="https://x.com/i/flow/login?redirect_after_login=%2FIputClub23588" target="_blank" rel="noopener noreferrer" >
                             <div className="logo-container">
-                                <Image src="/X-black.svg" alt="X" width={30} height={30} className="logo-image" />
+                                <Image src="/x-black.svg" alt="X" width={30} height={30} className="logo-image" />
                             </div>
                         </a>
                     </li>

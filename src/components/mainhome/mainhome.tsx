@@ -1,10 +1,9 @@
 "use client"
 import { OrbitingCircles } from "@/components/ui/orbiting-circles";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 
 export function MainHome() {
-  const { theme } = useTheme();
+  // const { theme } = useTheme();
   return (
     <>
     <div className="md:mt-24 lg:mt-28 mt-20 text-2xl md:text-4xl lg:text-6xl text-center w-full font-bold">東京国際工科専門職大学公認</div>

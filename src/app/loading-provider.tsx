@@ -23,19 +23,19 @@ export function LoadingProvider({
     if (loading) {
       setShouldRender(true);
     } else {
-      // 最低1.5秒は表示する
+      // 最低1秒は表示する
       const timer = setTimeout(() => {
         setShouldRender(false);
-      }, 1500);
+      }, 1000);
       return () => clearTimeout(timer);
     }
   }, [loading]);
 
   useEffect(() => {
-    // 初期ローディングを3秒後に解除
+    // 初期ローディングを1.6秒後に解除
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 

@@ -2,12 +2,9 @@ import { cn } from "@/lib/utils";
 import { ArrowRight, Mail } from "lucide-react"; // Mail アイコンをインポート
 import React from "react";
 
-interface InteractiveHoverButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
-
 export const InteractiveHoverButton = React.forwardRef<
   HTMLButtonElement,
-  InteractiveHoverButtonProps
+  React.ButtonHTMLAttributes<HTMLButtonElement>
 >(({ children, className, ...props }, ref) => {
   return (
     <button

@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
               <div className="flex space-x-4 gap-10">
               <Link href="https://x.com/i/flow/login?redirect_after_login=%2FIputClub23588" className="hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">
                 <div className="logo-container">
-                  <Image src="/X.svg" alt="X" width={40} height={40} className="logo-image" />
+                  <Image src="/x.svg" alt="X" width={40} height={40} className="logo-image" />
                 </div>
               </Link>
               <Link href="https://github.com/mind-sports-circle" className="hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">
@@ -132,22 +132,22 @@ const Footer: React.FC = () => {
             <nav className="mb-6">
               <ul className="flex justify-center space-x-4 text-sm">
                 <li>
-                  <a href="#" className="hover:text-gray-300 transition-colors">
+                  <a href="/activities" className="hover:text-gray-300 transition-colors">
                     活動紹介
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-300 transition-colors">
+                  <a href="/achievements" className="hover:text-gray-300 transition-colors">
                     実績
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-300 transition-colors">
+                  <a href="https://edu.toby.mathsci.jp/67938057725e94ee2891c734" className="hover:text-gray-300 transition-colors">
                     Wiki
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-300 transition-colors">
+                  <a href="/contact" className="hover:text-gray-300 transition-colors">
                     お問い合わせ
                   </a>
                 </li>
@@ -156,7 +156,7 @@ const Footer: React.FC = () => {
             <div className="flex justify-center space-x-4 mb-6">
               <Link href="https://x.com/i/flow/login?redirect_after_login=%2FIputClub23588" className="hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">
                 <div className="logo-container">
-                  <Image src="/X.svg" alt="X" width={40} height={40} className="logo-image" />
+                  <Image src="/x.svg" alt="X" width={40} height={40} className="logo-image" />
                 </div>
               </Link>
               <Link href="https://github.com/mind-sports-circle" className="hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">

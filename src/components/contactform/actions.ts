@@ -28,10 +28,24 @@ export async function sendEmail(data: z.infer<typeof formSchema>) {
 
   try {
     await transport.sendMail(mailOptions);
-  } catch (error: any) {
-    console.error("Error occurred:", error);
-    console.error("Error code:", error.code);
-    console.error("Error response:", error.response);
-    throw new Error(`メールの送信に失敗しました。エラーコード: ${error.code}`);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("Error occurred:", error.message);
+
+      // errorオブジェクトの型を拡張して、codeとresponseプロパティを持つ型を定義
+      const errorWithCode = error as Error & { code?: string; response?: string };
+
+      if (errorWithCode.code) {
+        console.error("Error code:", errorWithCode.code);
+      }
+      if (errorWithCode.response) {
+        console.error("Error response:", errorWithCode.response);
+      }
+
+      throw new Error(`メールの送信に失敗しました。エラーコード: ${errorWithCode.code ?? "不明"}`);
+    } else {
+      console.error("An unknown error occurred");
+      throw new Error("メールの送信に失敗しました。");
+    }
   }
 }

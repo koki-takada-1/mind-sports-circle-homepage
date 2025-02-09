@@ -18,7 +18,7 @@ export interface Activity {
   }[]
 }
 
-export const activities: Activity[] = [
+const activities: Activity[] = [
   {
     name: "将棋",
     shortDescription: "日本の伝統的な戦略ボードゲーム",
@@ -266,10 +266,6 @@ export default function Home() {
     }
   }, [isLoading]) // ローディングが完了した後に実行
 
-  // if (isLoading) {
-  //   return <div>Loading...</div> // ローディング中の表示
-  // }
-
   return (
     <>
       <Header/>
@@ -307,91 +303,3 @@ export default function Home() {
     </>
   )
 }
-
-// export default function Home() {
-//   const [focusedSection, setFocusedSection] = useState<string | null>(null)
-//   const [viewportHeight, setViewportHeight] = useState(0)
-//   const sectionRefs = useRef<(HTMLElement | null)[]>([])
-
-//   useEffect(() => {
-//     const updateViewportHeight = () => {
-//       setViewportHeight(window.innerHeight)
-//     }
-
-//     updateViewportHeight()
-//     window.addEventListener("resize", updateViewportHeight)
-
-//     const observers = sectionRefs.current.map((ref, index) => {
-//       if (!ref) return null
-
-//       const observer = new IntersectionObserver(
-//         (entries) => {
-//           entries.forEach((entry) => {
-//             if (entry.isIntersecting) {
-//               setFocusedSection(activities[index].name)
-//             }
-//           })
-//         },
-//         {
-//           threshold: 0.5,
-//           rootMargin: `-${window.innerHeight / 4}px 0px -${window.innerHeight / 4}px 0px`,
-//         },
-//       )
-
-//       observer.observe(ref)
-//       return observer
-//     })
-//     const hash = window.location.hash
-//     if (hash) {
-//       const id = decodeURIComponent(hash.substring(1)); // '#'を除去してデコード
-//       const element = document.getElementById(id)
-//       if (element) {
-//         element.scrollIntoView({ behavior: "smooth" }) // スムーズにスクロール
-//       }
-//     }
-//     return () => {
-//       window.removeEventListener("resize", updateViewportHeight)
-//       observers.forEach((observer) => observer?.disconnect())
-//     }
-//   }, [])
-
-//   return (
-//     <>
-//     <Header/>
-//     {/* <RetroGrid className="absolute inset-0 z-0"/> */}
-//     <main className="relative mt-12 md:mt-20 container mx-auto px-4 py-8 mb-11 z-10">
-//       <h1 className="text-xl md:text-5xl font-bold text-center mb-14">マインドスポーツサークル活動紹介</h1>
-//       <div className="space-y-16">
-//         {activities.map((activity, index) => (
-//           <motion.section
-//             key={activity.name}
-//             id={activity.name}
-//             ref={(el) => {sectionRefs.current[index] = el}}
-//             initial={{ opacity: 1, y: 50 }}
-//             animate={{
-//               opacity: 1,
-//               y: 0,
-//               filter: focusedSection ? (focusedSection === activity.name ? "blur(0px)" : "blur(4px)") : "blur(0px)",
-//             }}
-//             transition={{ duration: 0.5 }}
-//             className="scroll-mt-12"
-//             style={{ minHeight: `${viewportHeight * 0.8}px` }}
-//           >
-//             <RetroGrid className="absolute inset-0 z-0"/>
-//             <section id={activity.name}>
-//               <ActivitySection
-//                 activity={activity}
-//                 index={index}
-//                 isFocused={focusedSection === activity.name || focusedSection === null}
-//               />
-//             </section>
-//           </motion.section>
-//         ))}
-//       </div>
-//     </main>
-
-//     <Footer/>
-//     </>
-//   )
-// }
-

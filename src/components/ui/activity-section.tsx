@@ -20,7 +20,7 @@ interface ActivitySectionProps {
   isFocused: boolean
 }
 
-export default function ActivitySection({ activity, index, isFocused }: ActivitySectionProps) {
+export default function ActivitySection({ activity, isFocused }: ActivitySectionProps) {
   return (
     <Card className={`bg-white border border-gray-400 rounded-xl md:py-7 md:px-6 md:mt-32 transition-all duration-300 ${isFocused ? "scale-105" : ""}`}>
       <CardHeader>
