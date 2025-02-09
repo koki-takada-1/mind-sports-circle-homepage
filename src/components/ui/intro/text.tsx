@@ -22,7 +22,7 @@ export function TextAnimateDemo() {
       </div>
       <div className="hidden sm:block">
         <TextAnimate
-          className="text-black mix-blend-multiply text-9xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold outline-text"
+          className="text-black mix-blend-multiply text-2xl sm:text-2xl md:text-4xl lg:text-6xl xl:text-8xl font-bold outline-text"
           animation="blurInUp"
           by="character"
         >
