@@ -54,7 +54,7 @@ export function Active() {
                   className="object-contain"
                 />
               </div>
-              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-4xl lg:text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-3xl lg:text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                 将棋
               </span>
             </Link>
@@ -97,7 +97,7 @@ export function Active() {
                   className="object-contain"
                 />
               </div>
-              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-4xl lg:text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-3xl lg:text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                 麻雀
               </span>
             </Link>
@@ -142,7 +142,7 @@ export function Active() {
                   height={60}
                 />
               </div>
-              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-4xl lg:text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-3xl lg:text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                 プログラミング
               </span>
             </Link>
@@ -182,7 +182,7 @@ export function Active() {
                   height={60}
                 />
               </div>
-              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-4xl lg:text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-3xl lg:text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                 ビリヤード
               </span>
             </Link>
@@ -227,7 +227,7 @@ export function Active() {
                   height={60}
                 />
               </div>
-              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-4xl lg:text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-3xl lg:text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                 近代ボードゲーム
               </span>
             </Link>
@@ -267,7 +267,7 @@ export function Active() {
                   height={60}
                 />
               </div>
-              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-4xl lg:text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <span className="ml-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-3xl lg:text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                 トランプ
               </span>
             </Link>
@@ -312,7 +312,7 @@ export function Active() {
                   height={60}
                 />
               </div>
-              <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-4xl lg:text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-3xl lg:text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                 eスポーツ
               </span>
             </Link>
@@ -352,7 +352,7 @@ export function Active() {
                   height={60}
                 />
               </div>
-              <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-4xl lg:text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-slate-400 bg-clip-text text-center text-2xl md:text-3xl lg:text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                 チェス
               </span>
             </Link>

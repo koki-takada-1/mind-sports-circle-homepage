@@ -14,7 +14,7 @@ export default function Join() {
   return (
     <>
     {/* <WarpBackground> */}
-    <div className="mt-40 mb-11 lg:mt-72 text-4xl md:text-6xl lg:text-8xl text-center lg:mb-32 font-bold">Join our mind sports journey</div>
+    <div className="mt-40 mb-11 lg:mt-72 text-2xl md:text-5xl lg:text-6xl text-center lg:mb-32 font-bold">Join our mind sports journey</div>
     <div className="flex justify-center w-full h-full mb-20 md:mb-48">
 
         <NeonGradientCard className="flex items-center justify-center text-center md:w-3/4 w-full">

@@ -2,7 +2,6 @@
 
 import Footer from "@/components/footer/footer"
 import Header from "@/components/header/header"
-import { RetroGrid } from "@/components/retro-grid"
 import ActivitySection from "@/components/ui/activity-section"
 import { motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
@@ -277,7 +276,7 @@ export default function Home() {
     <>
       <Header/>
       <main className="relative mt-12 md:mt-20 container mx-auto px-4 py-8 mb-11 z-10">
-        <h1 className="text-xl md:text-5xl font-bold text-center mb-14">マインドスポーツサークル活動紹介</h1>
+        <h1 className="text-xl md:text-5xl font-bold text-center">マインドスポーツサークル活動紹介</h1>
         <div className="space-y-16">
           {activities.map((activity, index) => (
             <motion.section
@@ -294,7 +293,7 @@ export default function Home() {
               className="scroll-mt-36"
               style={{ minHeight: `${viewportHeight * 0.8}px` }}
             >
-              <RetroGrid className="absolute inset-0 z-0"/>
+              {/* <RetroGrid className="absolute inset-0 z-0"/> */}
               <section id={activity.name} className="z-[200] md:transform md:scale-90">
                 <ActivitySection
                   activity={activity}

@@ -1,15 +1,18 @@
 "use client"
 import { OrbitingCircles } from "@/components/ui/orbiting-circles";
+import { TextAnimate } from "@/components/ui/text-animate";
 import Image from "next/image";
 
 export function MainHome() {
   // const { theme } = useTheme();
   return (
     <>
-    <div className="md:mt-24 lg:mt-28 mt-20 text-2xl md:text-4xl lg:text-6xl text-center w-full font-bold">東京国際工科専門職大学公認</div>
-    <div className="mt-9 text-center w-full font-bold text-2xl md:text-4xl lg:text-6xl">マインドスポーツサークル</div>
+    <TextAnimate className="md:mt-48 lg:mt-80 mt-20 text-2xl md:text-4xl lg:text-6xl text-center w-full font-bold"           animation="blurInUp"
+          by="character">東京国際工科専門職大学公認</TextAnimate>
+    <TextAnimate className="mt-3 md:mt-5 text-center w-full font-bold text-2xl md:text-4xl lg:text-6xl"           animation="blurInUp"
+          by="character">マインドスポーツサークル</TextAnimate>
     <div className="md:ml-20 md:mt-36 mt-10 flex md:flex-row flex-col items-center justify-center bg-background md:gap-28 gap-10">
-        <div className="flex flex-col items-center justify-center ml-11">
+        <div className="flex flex-col items-center justify-center md:ml-11">
             <div className="relative flex h-[500px] flex-col items-center justify-center overflow-visible rounded-lg">
             <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
                 Mind Sports

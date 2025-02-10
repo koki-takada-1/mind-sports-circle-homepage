@@ -47,7 +47,7 @@ export default function Header() {
                 <ul
                     className={
                         isOpen
-                            ? "flex h-screen justify-center items-center flex-col gap-6 text-xl font-bold"
+                            ? "flex h-screen justify-center items-center flex-col gap-6 text-xl font-bold z-50"
                             : "pt-1 block md:flex md:gap-8" //block
                     }
                 >
