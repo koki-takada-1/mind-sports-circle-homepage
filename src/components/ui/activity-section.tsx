@@ -22,7 +22,7 @@ interface ActivitySectionProps {
 
 export default function ActivitySection({ activity, isFocused }: ActivitySectionProps) {
   return (
-    <Card className={`bg-white border border-gray-400 rounded-xl md:py-7 md:px-6 md:mt-32 transition-all duration-300 ${isFocused ? "scale-105" : ""}`}>
+    <Card className={`z-[300] bg-white border border-gray-400 rounded-xl md:py-7 md:px-6 md:mt-32 transition-all duration-300 ${isFocused ? "scale-105" : ""}`}>
       <CardHeader>
         <CardTitle className="md:text-3xl">{activity.name}</CardTitle>
         <CardDescription className="md:text-xl">{activity.shortDescription}</CardDescription>

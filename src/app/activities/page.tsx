@@ -213,15 +213,21 @@ export default function Home() {
   const [focusedSection, setFocusedSection] = useState<string | null>(null)
   const [viewportHeight, setViewportHeight] = useState(0)
   const [isLoading, setIsLoading] = useState(true) // ローディング状態を追加
+  const [isDesktop, setIsDesktop] = useState(false); // 画面サイズを管理
   const sectionRefs = useRef<(HTMLElement | null)[]>([])
 
   useEffect(() => {
     const updateViewportHeight = () => {
       setViewportHeight(window.innerHeight)
     }
+    const updateIsDesktop = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
 
-    updateViewportHeight()
+    updateViewportHeight();
+    updateIsDesktop();
     window.addEventListener("resize", updateViewportHeight)
+    window.addEventListener("resize", updateIsDesktop);
 
     const observers = sectionRefs.current.map((ref, index) => {
       if (!ref) return null
@@ -249,6 +255,7 @@ export default function Home() {
 
     return () => {
       window.removeEventListener("resize", updateViewportHeight)
+      window.removeEventListener("resize", updateIsDesktop);
       observers.forEach((observer) => observer?.disconnect())
     }
   }, [])
@@ -281,14 +288,14 @@ export default function Home() {
               animate={{
                 opacity: 1,
                 y: 0,
-                filter: focusedSection ? (focusedSection === activity.name ? "blur(0px)" : "blur(4px)") : "blur(0px)",
+                filter: isDesktop && focusedSection ? (focusedSection === activity.name ? "blur(0px)" : "blur(4px)") : "blur(0px)",
               }}
               transition={{ duration: 0.5 }}
-              className="scroll-mt-44"
+              className="scroll-mt-36"
               style={{ minHeight: `${viewportHeight * 0.8}px` }}
             >
               <RetroGrid className="absolute inset-0 z-0"/>
-              <section id={activity.name}>
+              <section id={activity.name} className="z-[200] md:transform md:scale-90">
                 <ActivitySection
                   activity={activity}
                   index={index}
